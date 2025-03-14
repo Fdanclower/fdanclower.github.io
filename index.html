@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>晚椛言月</title>
+        <link href="css/home.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="img/headd.jpg">
+        <style>
+            li{border-right:2px solid rgb(0, 0, 0);}
+            li:first-child{border-right:none;}
+        </style>
+    </head>
+    <body class="background">
+        <div class="buttom"><a href="javascript:scrollTo(0,0)" class="button">&nbsp;^&nbsp;</a></div>
+        <!--MENU-->
+        <ul class="pov">
+            <b><li class="ttt"><a href="#home" class="menu" style="background-color:rgba(149, 207, 34 ,0.6)">主页</a>
+                <li class="ttt"><a href="colorful.html" class="menu">康落符尔</a></li>
+                <li class="ttt"><a href="nothing.html" class="menu">其他</a></li>
+                <li class="ttt"><a href="nothing.html" class="menu" style="float:right">关于</a></li>
+            </b>
+        </ul>
+        <!--MENU-->
+        <!--Head-->
+        <div class="upper nothing">
+            <div><p class="upper" style="visibility:hidden">blank</p></div>
+            <img src="img/headd.jpg" class="head">
+        </div>
+        <!--Head-->
+        <!--中间部分-->
+        <div class="column">   
+            <h2 style="text-align:center;font-size:30px">欢迎回家</h2>
+            <p style="text-align:center" id="quote">Loading...</p>
+            <hr style="height:5px;border:none;border-top:4px solid #000000;"/>
+            <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(148, 53, 172)"><b>
+                Game
+            </b></p>
+            <div>
+                <a href="https://givet.voin.ink/" class="hvz" title="made by .Givet" target="_blank"><b style="font-size:35px;margin-left:15%;margin-right:17%;margin-top:5%">植物大战马六</b></a>
+                <a href="https://givet.voin.ink/" target="_blank"><img src="img/hvz.png" style="vertical-align:middle;width:40%;height:22.5%"></a>
+            </div><!--植物大战马六-->
+            <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
+            <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(63, 197, 59)"><b>
+                Socializing
+            </b></p>
+            <div>
+                <a target="_blank" href="https://space.bilibili.com/313032792"><img src="img/soci.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%"></a>
+                <a class="bili" href="https://space.bilibili.com/313032792" target="_blank">
+                    <b style="font-size:35px;margin-left:13%;margin-top:5%">Bilibili&nbsp;@晚椛言月</b>
+                </a>
+            </div><!--bilibili-->
+            <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
+            <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(12, 108, 218)"><b>
+                Novel
+            </b></p>
+            <div>
+                <a href="https://fdanclower.my.canvasite.cn/novel-colorful-main" class="bili" title="持续更新中!" target="_blank"><b style="font-size:35px;margin-left:15%;margin-right:17%;margin-top:5%">
+                    康落符尔</b></a>
+                <a href="https://fdanclower.my.canvasite.cn/novel-colorful-main" target="_blank"><img src="img/colorful.png" style="vertical-align:middle;width:40%;height:22.5%"></a>
+            </div>
+            <p style="text-align:center;font-size:50px;"><br><br><br><br><br><br><br><br><br><br><br><br><br><a href="nothing.html" class="bili">其实已经没有东西了</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+            <img src="img/no.jpg" style="width:100px;height:100px;margin-left:45%;">
+        </div>
+        <!--中间部分-->
+        <script> 
+            const quotes = [
+                "你知道吗，在人类诞生以前，这个世界上没有发现过人类遗迹",
+                "当你阅读了这一段话后，你会什么都没有发现",
+                "活着",
+                "cos²x+sin²x=1",
+                "Loading...",
+                "世间事物万千，唯有美食与爱不可辜负",
+                "终于开始流转的季节呀，请您绽放光彩",
+                "只愿两人的笑容依旧",
+            ];
+            document.addEventListener("DOMContentLoaded", () => {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        });
+            window.onload = GenerateQuote;
+        </script>
+    </body>
+</html>
