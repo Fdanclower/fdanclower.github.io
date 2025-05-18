@@ -115,11 +115,35 @@ a.menu:hover,a.menu:active{
     height:180px;
 }
 
-#quote{
+.quote{
     animation:up 0.4s;
     opacity: 1;
     font-size:20px;
     animation-timing-function: ease-out;
+}
+
+.current-time{
+    animation:up 0.4s;
+    animation-timing-function: ease-out;
+    font-size:60px;
+    color: transparent;
+    -webkit-text-stroke:2px #ffffff;
+    position:-webkit-sticky;
+    top: 0;
+    text-align: center;
+}
+
+.footer{
+    background-color: rgb( 0, 0, 0);
+    color: rgb( 255, 255, 255);
+    border: 10px;
+}
+a.footer:link,a.footer:visited,a.footer:hover,a.footer:active{
+    color:#ffffff;
+}
+
+.headIcon{
+    text-align: center;
 }
 
 @keyframes up{
@@ -136,6 +160,20 @@ a.menu:hover,a.menu:active{
 @media (max-width:900px){
     .column{
         width:900px;
+    }
+
+    .headIcon{
+        margin-left:370px;
+        text-align: unset;
+    }
+    
+    .current-time{
+        text-align: unset;
+        margin-left:340px
+    }
+
+    .pov{
+        display:none;
     }
 }
 @media (min-width:1920px){

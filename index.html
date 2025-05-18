@@ -25,14 +25,16 @@
         </ul>
         <!--MENU-->
         <!--Head-->
-        <div style="text-align:center">
+        <div class="headIcon">
             <img src="img/headd.jpg" class="head">
         </div>
+        <!--时间-->
+        <div class="current-time"></div>
         <!--Head-->
         <!--中间部分-->
         <div class="column">   
             <h2 style="text-align:center;font-size:30px">欢迎回家</h2>
-            <p style="text-align:center" id="quote">Loading...</p>
+            <p style="text-align: center;" class="quote">Loading...</p>
             <hr style="height:5px;border:none;border-top:4px solid #000000;"/>
             <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(148, 53, 172)"><b>
                 Game
@@ -44,7 +46,8 @@
                 <a href="https://givet.voin.ink/" target="_blank">
                     <img src="img/hvz.png" style="vertical-align:middle;width:40%;height:22.5%">
                 </a>
-            </div><!--植物大战马六-->
+            </div>
+            <!--植物大战马六-->
             <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
             <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(63, 197, 59)">
                 <b>
@@ -60,7 +63,8 @@
                         Bilibili&nbsp;@晚椛言月
                     </b>
                 </a>
-            </div><!--bilibili-->
+            </div>
+            <!--bilibili-->
             <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
             <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(12, 108, 218)">
                 <b>Novel</b>
@@ -92,9 +96,30 @@
             ];
             document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quote").textContent = quotes[randomIndex];
+            document.querySelector(".quote").textContent = quotes[randomIndex];
         });
             window.onload = GenerateQuote;
+        </script>
+        <script>
+             // 更新时间函数
+            function updateTime() {
+            const element = document.querySelector(".current-time");
+            const now = new Date();
+
+            // 格式化时间（确保两位数）
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+
+            // 拼接时间字符串
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            element.textContent = timeString;
+        }
+
+            // 立即调用一次，避免初始延迟
+            updateTime();
+            // 每秒更新一次
+            setInterval(updateTime, 1000);
         </script>
     </body>
 </html>
