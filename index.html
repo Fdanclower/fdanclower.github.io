@@ -1,4 +1,46 @@
 <!DOCTYPE html>
+<!--有bug?只要能用就不会去解决的！-->
+<!--2025/6/19日注：tmd我写的都是什么构思，改都不好改，将就着用吧，迟早把它推倒重写一遍-->
+<!--
+一个叶绿素
+        1         2         3         4
+      /   \\     /   \\     /   \\     /   \\
+  N  /     \\   /     \\   /     \\   /     \\  N
+   //       \\ //       \\ //       \\ //       \\
+  |           |           |           |
+  |    Mg²⁺   |           |    CH₃    |
+  |     |     |           |     |     |
+   \\   |   // \\         // \\       // \\   |   /
+    \\  |  /     \\     /     \\     /     \\  |  /
+     \\ | /       \\   /       \\   /       \\ | /
+      \\|/         \\ /         \\ /         \\|/
+       C============C           C============C
+        \\         / \\         / \\         /
+         \\       /   \\       /   \\       /
+          \\     /     \\     /     \\     /
+           C---C         C---C         C---C
+          /     \\      /     \\      /     \\
+         N       \\    /       \\    /       \\
+        / \\       \\  /         \\  /       / \\
+       /   \\       ||           ||       /   \\
+      /     \\     ||           ||     /     \\
+     /       \\   ||           ||   /       \\
+    C============C             C============C
+     \          / \           / \          /
+      \        /   \         /   \        /
+       \      /     \      /     \      /
+        \    /       \    /       \    /
+         \  /         \  /         \  /
+          C-----------C             C
+          |           |             |
+         H₂C        H₂C            R
+          |           |
+         O            O
+          \\          /
+           C=O       CH₃
+          /
+         OCH₃
+-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -41,7 +83,7 @@
             </b></p>
             <div>
                 <a href="https://givet.voin.ink/" class="hvz" title="made by .Givet" target="_blank">
-                    <b style="font-size:35px;margin-left:15%;margin-right:17%;margin-top:5%">植物大战马六</b>
+                    <b style="font-size:35px;margin-left:15%;margin-top:5%;margin-right:15%;">植物大战马六</b>
                 </a>
                 <a href="https://givet.voin.ink/" target="_blank">
                     <img src="img/hvz.png" style="vertical-align:middle;width:40%;height:22.5%">
@@ -56,15 +98,24 @@
             </p>
             <div>
                 <a target="_blank" href="https://space.bilibili.com/313032792">
-                    <img src="img/soci.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%">
+                    <img src="img/soci.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%;margin-bottom: 30px;">
                 </a>
                 <a class="bili" href="https://space.bilibili.com/313032792" target="_blank">
-                    <b style="font-size:35px;margin-left:13%;margin-top:5%">
+                    <b style="font-size:35px;margin-left:13%;margin-top:-100px">
                         Bilibili&nbsp;@晚椛言月
                     </b>
                 </a>
+                <hr style="height: 5px;border: none; border-top: 4px dashed rgb(12, 108, 218);">
+                <a target="_blank" href="https://x.com/Yonaitsu">
+                    <img src="img/soci2.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%;margin-top:30px">
+                </a>
+                <a target="_blank" href="https://x.com/Yonaitsu" class="bili">
+                    <b style="font-size:35px;margin-left:13%;margin-top:5%">
+                        X&nbsp;@Yonaitsu
+                    </b>
+                </a>
             </div>
-            <!--bilibili-->
+            <!--X and bilibili-->
             <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
             <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(12, 108, 218)">
                 <b>Novel</b>
@@ -80,7 +131,9 @@
                 </a>
             </div>
             <p style="text-align:center;font-size:50px;"><br><br><br><br><br><br><br><br><br><br><br><br><br><a href="nothing.html" class="bili">其实已经没有东西了</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-            <img src="img/no.jpg" style="width:100px;height:100px;margin-left:45%;">
+            <a tagrget="_blank" href="#">
+                <img src="img/no.jpg" style="width:100px;height:100px;margin-left:45%;">
+            </a>
         </div>
         <!--中间部分-->
         <script> 
@@ -93,13 +146,14 @@
                 "世间事物万千，唯有美食与爱不可辜负",
                 "终于开始流转的季节呀，请您绽放光彩",
                 "只愿两人的笑容依旧",
+                "发现窗口在某个宽度时主页排版变乱了？再放大一点或者缩小点宽度就行！",
             ];
             document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * quotes.length);
             document.querySelector(".quote").textContent = quotes[randomIndex];
         });
             window.onload = GenerateQuote;
-        </script>
+        </script><!--随机语录-->
         <script>
              // 更新时间函数
             function updateTime() {
@@ -120,6 +174,6 @@
             updateTime();
             // 每秒更新一次
             setInterval(updateTime, 1000);
-        </script>
+        </script><!--时间-->
     </body>
 </html>
