@@ -8,20 +8,17 @@
     src:url(../font/UDDigiKyokashoN-R.ttc)
 }
 
-a.hvz:link,a.hvz:visited{
-    color:rgb(38, 205, 247)
+.link{
+    transition:background-color 0.5s, color 0.5s, text-shadow 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s,text-shadow 0.5s;
+}
+a.link:link,a.link:visited{
+    color:rgb(38, 205, 247);
 }
 
-a.hvz:hover,a.hvz:active{
-    color:rgba(247, 163, 163, 0.8);
-}
-
-a.bili:link,a.bili:visited{
-    color:rgb(38, 205, 247)
-}
-
-a.bili:hover,a.hvz:active{
-    color:rgba(247, 163, 163, 0.8);
+a.link:hover,a.link:active{
+    color:rgb(255, 160, 239);
+    text-shadow: 0 0 10px rgb(119, 228, 255), 0 0 10px rgb(161, 225, 241);
 }
 
 
@@ -36,8 +33,8 @@ a.bili:hover,a.hvz:active{
     font-size:40px;
     text-align:center;
     -webkit-box-align:center;
-    transition:background-color 0.5s, color 0.5s;
-    -webkit-transition:background-color 0.5s, color 0.5s;
+    transition:background-color 0.5s, color 0.5s, text-shadow 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s,text-shadow 0.5s;
 }
 .buttom:hover{
     background-color:rgb(37, 37, 37);
@@ -64,7 +61,7 @@ a.button:hover,a.button:active{
     display:block;
     padding:0;
     margin:auto;
-    width:70%;
+    width: 960px;
     background-image:linear-gradient(rgba(255,255,255,0.8)40%, rgba(0, 0, 0, 1)100%);
     border-radius: 70px 70px 0 0;
 }/*内容背景*/
@@ -79,9 +76,11 @@ a.menu:link,a.menu:visited{
 
 a.menu:hover,a.menu:active{
     background-color:rgba(179, 180, 178, 0.8);
+    text-shadow: 0 0 10px rgb(29, 238, 245),0 0 10px rgb(152, 238, 241);
+    color: rgb(255, 255, 255)
 }
 
-.ttt{
+li{
     display:inline;
 }
 
@@ -91,6 +90,13 @@ a.menu:hover,a.menu:active{
     margin:0;
     padding:0;
     font-family:"genshinwords";
+    transition:background-color 0.5s, color 0.5s, text-shadow 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s,text-shadow 0.5s;
+}
+.menu span{
+    background-color:rgb(86, 226, 110);
+    text-shadow: 0 0 10px rgb(29, 238, 245),0 0 10px rgb(152, 238, 241);
+    color: rgb(255, 255, 255)
 }
 
 .background{
