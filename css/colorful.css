@@ -1,0 +1,123 @@
+@font-face{
+    font-family:"genshinwords";
+    src:url(../font/genshinword.ttf)
+}
+
+@font-face{
+    font-family:"uud";
+    src:url(../font/UDDigiKyokashoN-R.ttc)
+}
+
+.column{
+    margin: auto;
+    background-color:rgba(172, 225, 241, 0.8);
+    width:960px;
+    height:100%;
+}
+
+.backHome{
+    font-size:40px;
+    background-color: rgb(111, 244, 248);
+    color:rgb(210, 31, 255);
+    border-radius: 10px 10px 10px 10px;
+    margin-left:50px;
+    font-weight: bolder;
+    transition:background-color 0.5s, color 0.5s, text-shadow 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s,text-shadow 0.5s;
+}
+a.backHome:link,a.backHome:visited{
+    color:rgb(210, 31, 255);
+}
+a.backHome:hover,a.backHome:active{
+    text-shadow: 0 0 10px rgb(210, 31, 255), 0 0 10px rgb(228, 105, 245);
+    color:#ffffff;
+}
+.GoToUpButtom{
+    width:40px;
+    height:40px;
+    background-color:rgb(245, 245, 245);
+    position:fixed;
+    margin-top:40%;
+    margin-left: 90%;
+    border-radius:5px 5px 0px 0px;
+    font-size:40px;
+    -webkit-box-align:center;
+    transition:background-color 0.5s, color 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s;
+}
+.GoToUpButtom:hover{
+    background-color:rgb(37, 37, 37);
+}
+a.GoToUpButtomer:link,a.GoToUpButtomer:visited{
+    color:#000000;
+}
+a.GoToUpButtomer:hover,a.GoToUpButtomer:active{
+    color:#ffffff;
+}
+
+
+.pov{
+    background-color:rgba(242, 243, 240, 0.6);
+    border:2px solid rgba(192, 194, 190, 0.6);
+    position:fixed;
+    margin:0;
+    padding:0;
+    top:0;
+    overflow:hidden;
+    width:99%;
+}/*菜单栏背景*/
+
+.menu{
+    color:#ffffff;
+    font-size:40px;
+    margin:0;
+    padding:0;
+    font-family:"genshinwords";
+    transition:background-color 0.5s, color 0.5s, text-shadow 0.5s;
+    -webkit-transition:background-color 0.5s, color 0.5s,text-shadow 0.5s;
+}
+.menu span{
+    background-color: rgb(86, 226, 110);
+    text-shadow: 0 0 10px rgb(29, 238, 245),0 0 10px rgb(152, 238, 241);
+    color: rgb(255, 255, 255)
+}
+a.menu:link,a.menu:visited{
+    color:#000000;
+}
+a.menu:hover,a.menu:active{
+    background-color:rgba(179, 180, 178, 0.8);
+    text-shadow: 0 0 10px rgb(29, 238, 245),0 0 10px rgb(152, 238, 241);
+    color: rgb(255, 255, 255)
+}
+
+
+a{
+    text-decoration:none;
+}
+
+
+
+li{
+    display:inline;
+}
+
+.background{
+    background-image:url('../img/background.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+@media (max-width:900px){
+    .column{
+        width:900px;
+    }
+    .pov{
+        display:none;
+    }
+}
+@media (min-width:1920px){
+    .column{
+        width:1300px;
+    }
+}
