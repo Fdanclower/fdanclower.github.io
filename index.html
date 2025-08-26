@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--2025/6/19注：tmd我写的都是什么构思，改都不好改，将就着用吧，迟早把它推倒重写一遍-->
 <!--2025/7/16：之前偶然自搜了一波，发现搜索出来这个网站底下描述有点神奇，所以尝试给它改一改-->
+<!--2025/8/26:让AI帮忙翻新了一下网页——该死的deepseek居然把我的叶绿素删掉了-->
 <!--
 一个叶绿素
         1         2         3         4
@@ -41,123 +42,156 @@
           /
          OCH₃
 -->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
-        <meta name="keywords" content="晚椛言月, fdanclower, yonaitsu, 康落符尔, 植物大战马六">
-        <meta name="description" content="来自某个人自己的网站">
-        <meta name="author" content="晚椛言月">
-        <title>晚椛言月</title>
-        <link href="css/home.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="img/headd.jpg">
-    </head>
-    <body class="background">
-        <div class="buttom"><a href="javascript:scrollTo(0,0)" class="button">^</a></div>
-        <!--MENU-->
-        <ul class="pov">
-            <b><li><a href="#" class="menu"><span>&nbsp;主页&nbsp;</span></a>
-                <li><a href="/colorful" class="menu">&nbsp;康落符尔&nbsp;</a></li>
-                <li><a href="nothing.html" class="menu">&nbsp;其他&nbsp;</a></li>
-                <li><a href="nothing.html" class="menu" style="float:right">&nbsp;关于&nbsp;</a></li>
-            </b>
-        </ul>
-        <!--MENU-->
-        <!--Head-->
-        <div class="headIcon">
-            <img src="img/headd.jpg" class="head">
-        </div>
-        <!--时间-->
-        <div class="current-time"></div>
-        <!--Head-->
-        <!--中间部分-->
-        <div class="column">   
-            <h2 style="text-align:center;font-size:30px">欢迎回家</h2>
-            <p style="text-align: center;" class="quote">Loading...</p>
-            <hr style="height:5px;border:none;border-top:4px solid #000000;"/>
-            <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(12, 108, 218)">
-                <b>Novel</b>
-            </p>
-            <div>
-                <a href="/colorful" class="link" title="持续更新中!">
-                    <b style="font-size:35px;margin-left:15%;margin-right:17%;margin-top:5%">
-                        康落符尔
-                    </b>
-                </a>
-                <a href="/colorful">
-                    <img src="img/colorful.png" style="vertical-align:middle;width:40%;height:22.5%">
-                </a>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="晚椛言月, fdanclower, yonaitsu, 康落符尔, 植物大战马六">
+    <meta name="description" content="晚椛言月的个人网站，分享原创小说和社交链接">
+    <meta name="author" content="晚椛言月">
+    <title>晚椛言月</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/headd.jpg">
+</head>
+<body>
+        <!-- 返回顶部按钮 -->
+        <a href="#" class="top-button">↑</a>
+        
+        <!-- 导航菜单 -->
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="menu"><span>主页</span></a></li>
+                <li class="nav-item"><a href="/colorful" class="menu">康落符尔</a></li>
+                <li class="nav-item"><a href="nothing.html" class="menu">其他</a></li>
+                <li class="nav-item"><a href="nothing.html" class="menu">关于</a></li>
+            </ul>
+        </nav>
+        
+        <!-- 头部 -->
+        <header class="header">
+            <div class="head-icon">
+                <img src="img/headd.jpg" alt="头像" class="head">
             </div>
-            <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
-            <p style="margin-left:10%;margin-top:2%;margin-bottom:2%;font-size:35px;color:rgb(63, 197, 59)">
-                <b>
-                    Socializing
-                </b>
-            </p>
-            <div>
-                <a target="_blank" href="https://space.Bilibili.com/313032792">
-                    <img src="img/soci.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%;margin-bottom: 30px;">
-                </a>
-                <a class="link" href="https://space.Bilibili.com/313032792" target="_blank">
-                    <b style="font-size:35px;margin-left:13%;margin-top:-100px">
-                        Bilibili&nbsp;@晚椛言月
-                    </b>
-                </a>
-                <hr style="height: 5px;border: none; border-top: 4px dashed rgb(12, 108, 218);">
-                <a target="_blank" href="https://x.com/Yonaitsu">
-                    <img src="img/soci2.png" style="vertical-align:middle;width:40%;height:22.5%;margin-left:5%;margin-top:30px">
-                </a>
-                <a target="_blank" href="https://x.com/Yonaitsu" class="link">
-                    <b style="font-size:35px;margin-left:13%;margin-top:5%">
-                        X&nbsp;@Yonaitsu
-                    </b>
-                </a>
+            <div class="current-time">00:00:00</div>
+        </header>
+        
+        <!-- 欢迎部分 -->
+    <div class="container">
+        <section class="welcome-section">
+            <h2 class="welcome-title">欢迎回家</h2>
+            <p class="quote">Loading...</p>
+        </section>
+        
+        <!-- 小说部分 -->
+        <section class="section">
+            <h3 class="section-title novel-title">小说</h3>
+            <div class="content-row">
+                <div class="text-content">
+                    <a href="/colorful" class="link" title="持续更新中!">
+                        <h1>康落符尔</h1>
+                    </a>
+                    <p>学园都市，青春故事，奇迹之旅！随缘更新</p>
+                </div>
+                <div class="image-content">
+                    <a href="/colorful">
+                        <img src="img/colorful.png" alt="康落符尔封面">
+                    </a>
+                </div>
             </div>
-            <!--X and linklink-->
-            <hr style="height:5px;border:none;border-top:4px solid #000000;margin-top:2%;margin-bottom:2%"/>
-            <p style="text-align:center;font-size:50px;"><br><br><br><br><br><br><br><br><br><br><br><br><br><a href="nothing.html" class="link">其实已经没有东西了</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-            <a tagrget="_blank" href="#">
-                <img src="img/no.jpg" style="width:100px;height:100px;margin-left:45%;">
-            </a>
-        </div>
-        <!--中间部分-->
-        <script> 
-            const quotes = [
-                "你知道吗，在人类诞生以前，这个世界上没有发现过人类遗迹",
-                "当你阅读了这一段话后，你会什么都没有发现",
-                "活着",
-                "cos²x+sin²x=1",
-                "Loading...",
-                "世间事物万千，唯有美食与爱不可辜负",
-                "终于开始流转的季节呀，请您绽放光彩",
-                "只愿两人的笑容依旧",
-            ];
-            document.addEventListener("DOMContentLoaded", () => {
+        </section>
+        
+        <hr class="divider">
+        
+        <!-- 社交媒体部分 -->
+        <section class="section">
+            <h3 class="section-title social-title">社交媒体</h3>
+            
+            <div class="content-row">
+                <div class="image-content">
+                    <a href="https://space.Bilibili.com/313032792" target="_blank">
+                        <img src="img/soci.png" alt="Bilibili">
+                    </a>
+                </div>
+                <div class="text-content">
+                    <a class="link" href="https://space.Bilibili.com/313032792" target="_blank">
+                        <h1>Bilibili @晚椛言月</h1>
+                    </a>
+                    <p>关注我的Bilibili账号，查看最新视频和动态。</p>
+                </div>
+            </div>
+            
+            <hr class="content-divider">
+            
+            <div class="content-row">
+                <div class="image-content">
+                    <a href="https://x.com/Yonaitsu" target="_blank">
+                        <img src="img/soci2.png" alt="X账号">
+                    </a>
+                </div>
+                <div class="text-content">
+                    <a class="link" href="https://x.com/Yonaitsu" target="_blank">
+                        <h1>X @Yonaitsu</h1>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <hr class="divider">
+        
+        <p style="text-align: center;margin-top:500px;margin-bottom: 1000px;font-size:50px">
+            <a href="nothing.html" class="link" >其实已经没有东西了</a>
+        </p>
+        <p style="text-align: center;">rua</p>
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-image">
+                <a href="old.html"><img src="img/no.jpg" alt="没有更多内容"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // 随机语录
+        const quotes = [
+            "你知道吗，在人类诞生以前，这个世界上没有发现过人类遗迹",
+            "当你阅读了这一段话后，你会什么都没有发现",
+            "活着",
+            "cos²x+sin²x=1",
+            "Loading...",
+            "世间事物万千，唯有美食与爱不可辜负",
+            "终于开始流转的季节呀，请您绽放光彩",
+            "只愿两人的笑容依旧",
+        ];
+        
+        document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * quotes.length);
             document.querySelector(".quote").textContent = quotes[randomIndex];
         });
-            window.onload = GenerateQuote;
-        </script><!--随机语录-->
-        <script>
-             // 更新时间函数
-            function updateTime() {
+        
+        // 更新时间函数
+        function updateTime() {
             const element = document.querySelector(".current-time");
             const now = new Date();
-
-            // 格式化时间（确保两位数）
+            
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
-
-            // 拼接时间字符串
+            
             const timeString = `${hours}:${minutes}:${seconds}`;
             element.textContent = timeString;
         }
-
-            // 立即调用一次，避免初始延迟
-            updateTime();
-            // 每秒更新一次
-            setInterval(updateTime, 1000);
-        </script><!--时间-->
-    </body>
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        // 平滑滚动到顶部
+        document.querySelector('.top-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
 </html>
