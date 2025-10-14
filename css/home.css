@@ -148,7 +148,7 @@ a.link:hover, a.link:active {
 .current-time {
     font-size: 70px;
     color:transparent;
-    -webkit-text-stroke:2px #fff;
+    -webkit-text-stroke:1px #3bd8ff;
     margin-top: 10px;
     animation: up 0.4s;
     animation-timing-function: ease-out;
@@ -278,4 +278,16 @@ a.link:hover, a.link:active {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*滚动条*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(135deg, #d456ce 0%, #5498f1 100%);
+    border-radius: 5px;
 }
