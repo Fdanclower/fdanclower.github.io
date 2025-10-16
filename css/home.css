@@ -291,3 +291,39 @@ a.link:hover, a.link:active {
     background: linear-gradient(135deg, #d456ce 0%, #5498f1 100%);
     border-radius: 5px;
 }
+
+/*指针改变 */
+body{
+    cursor: url('../img/cursor.cur'), auto;
+}
+
+/*加载动画*/
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 8000;
+}
+
+.loading-spinner{
+    border: 4px solid rgba(0, 0, 0, 0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-top-color: #5498f1 ;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s esae-in-out infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}

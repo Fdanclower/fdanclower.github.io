@@ -55,7 +55,7 @@
 </head>
 <body>
         <!-- 返回顶部按钮 -->
-        <a href="#" class="top-button">↑</a>
+    <a href="#" class="top-button">↑</a>
         
         <!-- 导航菜单 -->
     <div class="container">
@@ -150,6 +150,11 @@
             </div>
         </footer>
     </div>
+    
+        <!--加载-->
+    <div class="loading" id="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
 
     <script>
         // 随机语录
@@ -193,6 +198,12 @@
                 behavior: 'smooth'
             });
         });
+
+        //加载屏幕   
+        window.addEventListener('load', function(){
+            document.getElementById('loading-screen').style.display = 'none';
+            ;
+        })
     </script>
 </body>
 </html>
