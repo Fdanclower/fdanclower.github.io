@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!--2025/6/19注：tmd我写的都是什么构思，改都不好改，将就着用吧，迟早把它推倒重写一遍-->
+<!--2025/6/19：tmd我写的都是什么构思，改都不好改，将就着用吧，迟早把它推倒重写一遍-->
 <!--2025/7/16：之前偶然自搜了一波，发现搜索出来这个网站底下描述有点神奇，所以尝试给它改一改-->
 <!--2025/8/26:让AI帮忙翻新了一下网页——该死的deepseek居然把我的叶绿素删掉了-->
+<!--2025/10/17:哈哈哈我终于算是把加载页面写完了，但是没能适配手机，但是管他呢能用就行了管他那么多干什么对吧！！！？-->
 <!--
 一个叶绿素
         1         2         3         4
@@ -152,8 +153,10 @@
     </div>
     
         <!--加载-->
-    <div class="loading" id="loading-screen">
+    <div class="loading">
         <div class="loading-spinner"></div>
+        <div class="loading-text">少女祈祷中...</div>
+        <h1 class="loading-jump">&nbsp;&nbsp;觉得加载时间太长？点我强制进入</h1>
     </div>
 
     <script>
@@ -167,6 +170,7 @@
             "世间事物万千，唯有美食与爱不可辜负",
             "终于开始流转的季节呀，请您绽放光彩",
             "只愿两人的笑容依旧",
+            "刮了一阵风，将你带到了我的眼前",
         ];
         
         document.addEventListener("DOMContentLoaded", () => {
@@ -198,12 +202,31 @@
                 behavior: 'smooth'
             });
         });
+    </script>
 
-        //加载屏幕   
-        window.addEventListener('load', function(){
-            document.getElementById('loading-screen').style.display = 'none';
-            ;
-        })
+    <!--加载省略号动画-->
+    <script>
+        const textAnimation = document.querySelector(".loading-text");
+        const dots = ["", ".", "..", "..."];
+        let index = 0;
+
+        const dotInterval = setInterval(() => {
+            index = ( index + 1 ) % dots.length;
+            textAnimation.textContent = `少女祈祷中${dots[index]}`;
+        }, 333
+    );
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            clearInterval(dotInterval);
+            document.querySelector('.loading').style.display = 'none';
+        }, 500);
+    })
+
+    document.querySelector('.loading-jump').addEventListener('click', () =>{
+        clearInterval(dotInterval);
+        document.querySelector('.loading').style.display = 'none';
+    })
     </script>
 </body>
 </html>
