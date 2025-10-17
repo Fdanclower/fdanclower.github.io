@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>康落符尔-首页</title>
+    <link rel="shortcut icon" href="../img/headd.jpg">
+    <link rel="stylesheet" type="text/css" href="css/colorful.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="晚椛言月, fdanclower, yonaitsu, 康落符尔, 植物大战马六">
+    <meta name="description" content="康落符尔 学园都市，青春故事，奇迹之旅！ 随缘更新">
+    <meta property="og:description" content="康落符尔 学园都市，青春故事，奇迹之旅！随缘更新">
+    <meta name="author" content="晚椛言月">
+</head>
+<body>
+    <a href="#" class="top-button">↑</a>
+        
+        <!-- 导航菜单 -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/" class="menu">主页</a></li>
+            <li class="nav-item"><a href="#" class="menu active">康落符尔</a></li>
+            <li class="nav-item"><a href="/nothing" class="menu">其他</a></li>
+            <li class="nav-item"><a href="/nothing" class="menu">关于</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- 头部横幅 -->
+        <header class="header">
+            <img src="../img/colorful.png" class="banner">
+            <p>欢迎来到康落符尔!</p>    
+        </header>
+
+        <a class="home-link" href="/">返回主页</a>
+
+        <!-- 序章部分 -->
+        <section class="chapter" id="prelude">
+            <div class="chapter-header">
+                <h2 class="chapter-title prelude">序章</h2>
+                <div class="chapter-line prelude"></div>
+            </div>
+            <div class="chapter-content">
+                <a class="chapter-link prelude" href="/colorful/chapter1/0">康落符尔欢迎你</a>
+            </div>
+        </section>
+        
+        <!-- 第一章部分 -->
+        <section class="chapter" id="chapter1">
+            <div class="chapter-header">
+                <h2 class="chapter-title chapter1">第一章 渺茫雪原下的绿洲</h2>
+                <div class="chapter-line chapter1"></div>
+            </div>
+            <div class="chapter-content">
+                <a class="chapter-link chapter1" href="/colorful/chapter1/1">§1-1 缺席的角落</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/2">§1-2 埋没于雪中的校园</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/3">§1-3 "热闹"的校园</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/4">§1-4 饭后甜点</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/5">§1-5 谈判</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/6">§1-6 月下二人</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/7">§1-7 因大雪而迷途之人</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/8">§1-8 橘梨小队，突击！</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/9">§1-9 热储计划</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/10">§1-10 终章序幕</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/11">§1-11 枪响，人亡？</a>
+                <a class="chapter-link chapter1" href="/colorful/chapter1/12">§1-12 雪地里的雏菊</a>
+            </div>
+        </section>
+
+        <section class="chapter" id="chapter2">
+            <div class="chapter-header">
+                <h2 class="chapter-title chapter2">第二章</h2>
+                <div class="chapter-line chapter2"></div>
+            </div>
+            <div class="chapter-content">
+                <a class="chapter-link chapter2" href="/colorful/chapter2/1">§2-1 新一天，启程!</a>
+                <a class="chapter-link chapter2" href="/colorful/chapter2/2">§2-2 一路疲惫</a>
+                <a class="chapter-link chapter2 coming-soon">§2-3 敬请期待</a>
+            </div>
+        </section>
+    </div>
+
+    
+    <!--加载-->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">少女祈祷中...</div>
+        <h1 class="loading-jump">&nbsp;&nbsp;觉得加载时间太长？点我强制进入</h1>
+    </div>
+
+    <script>
+        // 平滑滚动到顶部
+        document.querySelector('.top-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 为"敬请期待"添加点击事件
+        document.querySelectorAll('.coming-soon').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('敬请期待');
+            });
+        });
+    </script>
+    <script>
+        const textAnimation = document.querySelector(".loading-text");
+        const dots = ["", ".", "..", "..."];
+        let index = 0;
+
+        const dotInterval = setInterval(() => {
+            index = ( index + 1 ) % dots.length;
+            textAnimation.textContent = `少女祈祷中${dots[index]}`;
+            }, 333
+        );
+
+        window.addEventListener('load', () => {
+        setTimeout(() => {
+            clearInterval(dotInterval);
+            document.querySelector('.loading').style.display = 'none';
+        }, 800);
+        })
+
+        document.querySelector('.loading-jump').addEventListener('click', () =>{
+            clearInterval(dotInterval);
+            document.querySelector('.loading').style.display = 'none';
+        })
+    </script>
+</body>
+</html>
